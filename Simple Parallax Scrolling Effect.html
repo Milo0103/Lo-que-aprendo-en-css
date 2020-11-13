@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Parallax Scrolling Effect</title>
+    <link rel="icon" type="image/png" href="https://kariselovuo.pro/ksprov1/wp-content/uploads/2018/02/css-logo.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <section id="a">
+      <img src="bg.jpg" id="bg">
+      <img src="moon.png" id="moon">
+      <img src="mountain.png" id="mountain">
+      <img src="road.png" id="road">
+      <h2 id="text">Moon Light</h2>
+    </section>
+        <h2 id="textob">Sinceramente, nose como hice esto, es como las paginas de apple</h2>
+    <section id="b">
+      <section id="c">
+        <img src="mountain1.jpg" id="mountainb">
+      </section>
+    </section>
+
+    <script type="text/javascript">
+      let bg = document.getElementById("bg")
+      let moon = document.getElementById("moon")
+      let mountain = document.getElementById("mountain")
+      let road = document.getElementById("road")
+      let text = document.getElementById("text")
+      let textb = document.getElementById("textob")
+
+      window.addEventListener('scroll', function () {
+        var value =window.scrollY
+        bg.style.top = value * 0.5 + "px";
+        moon.style.left = value * 0.5 + "px";
+        moon.style.top = value * 0.5 + "px";
+        mountain.style.bottom = -value * 0.15 + "px";
+        road.style.bottom = value * 0.15 + "px";
+        text.style.top = value + 0.15 + "px";
+        textb.style.color = "rgba("+value*0.04+"0.04,"+value*0.04+"0.04 ,"+value*0.04+"0.04,1)";
+      })
+    </script>
+  </body>
+</html>
