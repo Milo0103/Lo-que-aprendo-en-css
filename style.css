@@ -56,13 +56,12 @@ section{
 #road{
   z-index: 7;
 }
-
 #b:before{
   content: '';
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 100px;
+  height: 200px;
   background-image:linear-gradient(to top, #0a2a43, transparent);
   z-index: 5;
 }
@@ -113,4 +112,104 @@ section{
   text-align:center;
   font-size: 3em;
   z-index: 2;
+}
+#d{
+  background-color: #121212;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+#d:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to bottom, #0a2a43, transparent);
+  z-index: 5  ;
+}
+.container{
+  position:relative;
+  width: 92%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 0 40px;
+  z-index: 0;
+}
+.container .box{
+  position: relative;
+  height: 400px;
+  background: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+
+}
+.container .box:before{
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  transform: skew(2deg,2deg);
+  z-index: -1;
+}
+.content{
+  position: relative;
+  padding: 20px;
+}
+.box .content h2{
+  position: absolute;
+  top: -60px;
+  right: 20px;
+  margin: 0;
+  padding: 0;
+  font-size: 10em;
+  color: rgba(255, 255, 255, 0.05);
+  transition: 0.5s;
+}
+.box:hover .content h2{
+  top: -140px;
+}
+.box .content h3{
+  margin: 0 0 10px
+  padding: 0;
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+}
+.box .content p{
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 16px;
+}
+.box .content a{
+  transition: 0.5s;
+  position: relative;
+  margin: 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 1px solid #fff;
+  display: inline-block;
+  color: #fff;
+  transform: hidden;
+  opacity: 0;
+  transform: translateY(0px);
+}
+.box:hover .content a{
+  transform: visible;
+  opacity: 1;
+  transform: translateY(50px);
+}
+.box .content a:hover{
+  color: #121212;
+  background: #fff;
 }
