@@ -140,19 +140,24 @@ section{
   grid-gap: 0 40px;
   z-index: 0;
 }
-.container .box{
+.box{
   position: relative;
-  height: 400px;
+  height: 250px;
   background: #121212;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #000;
-
+  border: 1px solid #3a3a3a;
+  transition: 0.5s;
 }
-.container .box:before{
+.box:hover{
+  height: 360px;
+  border:3px solid #fff;
+  transition: 0.5s;
+}
+.box:hover:before{
   content: '';
-  position: absolute;
+  position:absolute;
   top: -2px;
   left: -2px;
   right: -2px;
@@ -160,6 +165,9 @@ section{
   background: #fff;
   transform: skew(2deg,2deg);
   z-index: -1;
+  transition: 0.5s;
+  box-shadow: 0 0 3px #fff,
+              0 0 13px #fff;
 }
 .content{
   position: relative;
@@ -176,7 +184,7 @@ section{
   transition: 0.5s;
 }
 .box:hover .content h2{
-  top: -140px;
+  top: -100px;
 }
 .box .content h3{
   margin: 0 0 10px
@@ -190,6 +198,12 @@ section{
   padding: 0;
   color: #fff;
   font-size: 16px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.box:hover .content p{
+  opacity: 1;
+  transition: 0.5s;
 }
 .box .content a{
   transition: 0.5s;
@@ -212,4 +226,8 @@ section{
 .box .content a:hover{
   color: #121212;
   background: #fff;
+  box-shadow: 0 0 3px #fff,
+              0 0 18px #fff,
+              0 0 36px #fff,
+              0 0 72px #fff;
 }
