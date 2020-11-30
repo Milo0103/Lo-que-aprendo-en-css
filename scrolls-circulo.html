@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="https://kariselovuo.pro/ksprov1/wp-content/uploads/2018/02/css-logo.png">
+    <link rel="stylesheet" href="stylesc.css">
+    <title> lo que aprendo de CSS</title>
+  </head>
+  <body>
+    <header id="hed">
+      <a href="#" class="logo">Scrolls de circulo</a>
+      <ul>
+        <li><a href="index.html">CSS</a></li>
+        <li><a href="">Video 2</a></li>
+        <li><a href="">Video 3</a></li>
+        <li><a href="">Video 4</a></li>
+      </ul>
+    </header>
+      <section>
+        <span class="curve">
+          <img src="curve.png">
+        </span>
+      </section>
+    <script type="text/javascript">
+
+      var scroll = document.querySelector('.curve');
+      window.addEventListener('scroll', function(){
+        var value = 1+window.scrollY/-200;
+        scroll.style.transform = `scaleY(${value})`;
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky",window.scrollY > 0);
+        let hed = document.getElementById("hed");
+
+        var valuee = window.scrollY
+        hed.style.background = "rgba(255, 255, 255 ,"+valuee*0.0025+")";
+      })
+    </script>
+  </body>
+</html>
