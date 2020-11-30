@@ -11,9 +11,9 @@
       <a href="#" class="logo">Efectos con Scroll</a>
       <ul>
         <li><a href="index.html">CSS</a></li>
-        <li><a href="">Video 2</a></li>
-        <li><a href="">Video 3</a></li>
-        <li><a href="">Video 4</a></li>
+        <li><a href="NaN.html">---</a></li>
+        <li><a href="NaN.html">---</a></li>
+        <li><a href="NaN.html">---</a></li>
       </ul>
     </header>
       <section id="a">
@@ -22,18 +22,29 @@
           <img src="curve.png">
         </span>
       </section>
+      <section id="b">
+        <h1>Efecto con Angulo</h1>
+          <span class="skewed1"></span>
+          <span class="skewed"></span>
+      </section>
     <script type="text/javascript">
 
       var scroll = document.querySelector('.curve');
+      var skewed = document.querySelector('.skewed');
+      var skewed1 = document.querySelector('.skewed1');
       window.addEventListener('scroll', function(){
-        var value = 1+window.scrollY/-366;
-        scroll.style.transform = `scaleY(${value})`;
+        var valuee = 1+window.scrollY/-366;
+        scroll.style.transform = `scaleY(${valuee})`;
         var header = document.querySelector("header");
         header.classList.toggle("sticky",window.scrollY > 0);
         let hed = document.getElementById("hed");
 
-        var valuee = window.scrollY
-        hed.style.background = "rgba(255, 255, 255 ,"+valuee*0.004+")";
+        var value = window.scrollY;
+        hed.style.background = "rgba(255, 255, 255 ,"+value*0.004+")";
+        var value1 = -20 + window.scrollY/60;
+        skewed.style.transform = "skewY("+value1+"deg)"
+        var value2 = -12 + window.scrollY/63;
+        skewed1.style.transform = "skewY("+value2+"deg)"
       })
     </script>
   </body>
