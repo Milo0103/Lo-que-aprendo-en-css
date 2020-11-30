@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <header id="hed">
+      <a href="#" class="logo">CSS</a>
+      <ul>
+        <li><a href="">Video 1</a></li>
+        <li><a href="">Video 2</a></li>
+        <li><a href="">Video 3</a></li>
+        <li><a href="">Video 4</a></li>
+      </ul>
+    </header>
     <section id="a">
       <img src="bg.jpg" id="bg">
       <img src="moon.png" id="moon">
@@ -76,6 +85,10 @@
       let textb = document.getElementById("textob")
 
       window.addEventListener('scroll', function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky",window.scrollY > 0);
+        let hed = document.getElementById("hed");
+
         var value =window.scrollY
         bg.style.top = value * 0.5 + "px";
         moon.style.left = value * 0.5 + "px";
@@ -84,6 +97,7 @@
         road.style.bottom = value * 0.15 + "px";
         text.style.top = value + 0.15 + "px";
         textb.style.color = "rgba(255, 255, 255 ,"+value*0.002+")";
+        hed.style.background = "rgba(255, 255, 255 ,"+value*0.0025+")";
       })
     </script>
   </body>
