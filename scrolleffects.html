@@ -8,7 +8,7 @@
   </head>
   <body>
     <header id="hed">
-      <a href="#" class="logo">Scrolls de circulo</a>
+      <a href="#" class="logo">Efectos con Scroll</a>
       <ul>
         <li><a href="index.html">CSS</a></li>
         <li><a href="">Video 2</a></li>
@@ -16,7 +16,8 @@
         <li><a href="">Video 4</a></li>
       </ul>
     </header>
-      <section>
+      <section id="a">
+        <h1>Efecto de Circulo</h1>
         <span class="curve">
           <img src="curve.png">
         </span>
@@ -25,14 +26,14 @@
 
       var scroll = document.querySelector('.curve');
       window.addEventListener('scroll', function(){
-        var value = 1+window.scrollY/-200;
+        var value = 1+window.scrollY/-366;
         scroll.style.transform = `scaleY(${value})`;
         var header = document.querySelector("header");
         header.classList.toggle("sticky",window.scrollY > 0);
         let hed = document.getElementById("hed");
 
         var valuee = window.scrollY
-        hed.style.background = "rgba(255, 255, 255 ,"+valuee*0.0025+")";
+        hed.style.background = "rgba(255, 255, 255 ,"+valuee*0.004+")";
       })
     </script>
   </body>
