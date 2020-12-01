@@ -156,14 +156,12 @@ header.sticky ul li a:hover{
 .container h2{
   font-size: 2.42em;
   width: 100%;
-  margin-bottom: 500px;
   text-align: center;
-  width: auto;
   color: #fff;
 }
 .title {
   position: relative;
-  top: 2106px;
+  top: 2100px;
   text-align: center;
   z-index: 1;
   font-size: 3em;
@@ -172,14 +170,14 @@ header.sticky ul li a:hover{
 }
 #d{
   position: absolute;
-  top: 2650px;
+  top: 2576px;
   left: 0;
   width: 100%;
   height: 125vh;
   background: url(Munich3.jpg), linear-gradient(130deg, #FF4242, #FFE56E);
   background-blend-mode: luminosity;
   background-attachment: fixed;
-  clip-path: circle(100px at center);
+  clip-path: circle(10px at center);
 }
 .container2{
   position: absolute;
@@ -189,16 +187,12 @@ header.sticky ul li a:hover{
   background: #000;
 }
 .container2 h2{
-  font-size: 2.42em;
   width: 100%;
   margin-bottom: 500px;
-  text-align: center;
-  width: auto;
-  color: #fff;
 }
 .title2 {
   position: relative;
-  top: 2933px;
+  top: 2866px;
   text-align: center;
   z-index: 1;
   font-size: 3em;
