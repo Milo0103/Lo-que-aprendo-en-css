@@ -299,3 +299,15 @@ section{
               0 0 20px #fff;
   transition: 0.5s;
 }
+.content #alinear{
+  top: -28px;
+}
+.box:hover .content #alinear{
+  top: -68px;
+}
+.content #alinear1{
+  top: -23px;
+}
+.box:hover .content #alinear1{
+  top: -68px;
+}
