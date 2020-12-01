@@ -26,7 +26,7 @@ header.sticky{
   padding: 5px 85px;
   background: rgba(255, 255, 255, 0.5);
 }
-  header .logo{
+header .logo{
   position: relative;
   font-weight: 700;
   color: #fff;
@@ -134,4 +134,39 @@ header.sticky ul li a:hover{
 #b h1{
   padding: 20px;
   font-size: 50px;
+}
+#c{
+  position: absolute;
+  top: 1750px;
+  left: 0;
+  width: 100%;
+  height: 125vh;
+  background: url(Munich2.jpg), linear-gradient(130deg, #FF4242, #FFE56E);
+  background-blend-mode: luminosity;
+  background-attachment: fixed;
+  clip-path: circle(0px at center);
+}
+.container{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin-top: calc(110vh + 1750px);
+  background: #000;
+}
+.container h2{
+  font-size: 2.42em;
+  width: 100%;
+  margin-bottom: 500px;
+  text-align: center;
+  width: auto;
+  color: #fff;
+}
+.title {
+  position: relative;
+  top: 2106px;
+  text-align: center;
+  z-index: 1;
+  font-size: 3em;
+  width: 100%;
+  color: #fff;
 }
