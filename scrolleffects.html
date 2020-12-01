@@ -32,12 +32,18 @@
       <div class="container">
         <h2>---------------------------------------------------------------</h2>
       </div>
+      <h1 class="title2">Efecto de Cierre Circular</h1>
+      <section id="d"></section>
+      <div class="container2">
+        <h2>---------------------------------------------------------------</h2>
+      </div>
     <script type="text/javascript">
 
       var scroll = document.querySelector('.curve');
       var skewed = document.querySelector('.skewed');
       var skewed1 = document.querySelector('.skewed1');
       var section = document.querySelector('#c');
+      var section2 = document.querySelector('#d');
       window.addEventListener('scroll', function(){
         var valuee = 1+window.scrollY/-366;
         scroll.style.transform = `scaleY(${valuee})`;
@@ -48,7 +54,9 @@
 
         var value = window.scrollY;
         hed.style.background = "rgba(255, 255, 255 ,"+value*0.004+")";
-        section.style.clipPath = "circle(calc("+value+"px - 1400px) at center)"
+        section.style.clipPath = "circle(calc("+value+"px - 1400px) at center)";
+        var value3 = 800 - window.scrollY;
+        section2.style.clipPath = "circle(calc("+ value3 +"px + 2200px) at center)";
         var value1 = -20 + window.scrollY/60;
         skewed.style.transform = "skewY("+value1+"deg)"
         var value2 = -12 + window.scrollY/63;
