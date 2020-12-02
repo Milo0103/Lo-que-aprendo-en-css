@@ -9,6 +9,7 @@
 body{
   height: 200vh ;
   background: #000000;
+  min-height: 5080px;
 }
 header{
   position: fixed;
@@ -75,6 +76,22 @@ header.sticky .logo:hover{
 header.sticky ul li a:hover{
   text-shadow: 0 0 10px #000000;
   font-weight: 1000;
+  transition: 0.5s;
+}
+#Prox{
+  position: absolute;
+  top: 4750px;
+  margin: 0 575px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  transition: 0.5s;
+}
+#Prox:hover{
+  text-shadow: 0 0 5px #fff,
+               0 0 15px #fff,
+               0 0 25px #fff;
   transition: 0.5s;
 }
 #a {
@@ -183,17 +200,6 @@ header.sticky ul li a:hover{
   background-attachment: fixed;
   clip-path: circle(10px at center);
 }
-.container2{
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  margin-top: calc(110vh + 2650px);
-  background: #000;
-}
-.container2 h2{
-  width: 100%;
-  margin-bottom: 500px;
-}
 .title2 {
   position: relative;
   top: 2715px;
@@ -202,4 +208,19 @@ header.sticky ul li a:hover{
   font-size: 3em;
   width: 100%;
   color: #fff;
+}
+.block {
+  position: relative;
+  top: 3000px;
+  margin: 0 0 0 0;
+  padding-bottom: 60px;
+}
+.h1e{
+  position: absolute;
+  top: 3190px;
+  left: 10px;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 3.5em;
+  z-index: 3;
 }
